@@ -38,7 +38,7 @@ html{
     font-size: 62.5%;
 }
 p{
-    font-family: 'Cherish', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size:2rem;
 }
 a, h1, h2, h4{
@@ -114,24 +114,28 @@ p{
 /*Body*/
 #body{
     margin-top:2% ;
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-content: space-between;
+
 }
-#body div{
+.body{
     width: 23%;
-    height: 40%;
-}
-#body img{
+    height: 46%;
+    text-align: center;
+    }
+.plane{
     width: 100%;
-    height: 100%;
-    
+    height: 29vh;
 }
+
     /*Footer Styles*/
 footer{
-        margin-top: 5%;
-        text-align: center;
-        }
+    margin-top: 3%;
+    text-align: center;
+ }
 footer h2{
 margin-bottom: 2% ;
 } 
@@ -141,3 +145,47 @@ footer button{
     margin-bottom: 3%;
 }    
 
+/*Queries*/
+@media (max-width:800px) {
+   /*Header*/
+    nav{
+        justify-content: space-around;
+    }
+    nav a{
+        width: 15%;
+        text-align: center;
+        padding-top: 1.5%;
+    }
+    /*Top*/
+    #top{
+        flex-direction: column;
+        margin-top: 0;
+        width: 95%;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .left img{
+        width: 100%;
+    }
+    .right p{
+        font-size: 2.7rem;
+        line-height:42px;
+    }
+    /*Body*/
+    #body{
+        margin-top: 10%;
+        justify-content: space-evenly;
+        height: 160vh;
+       
+    }
+    #body div{
+        width: 45%;
+        height: 20%;
+    }
+    /*Footer*/
+    footer{
+      
+    }
+    
+}
